@@ -1,0 +1,53 @@
+<%layout('/layouts/boilerplate')%>
+<div class="row">
+    <h1 class="text-center">
+        New campground
+    </h1>
+    <div class="col-6 offset-3">
+        <form action="/campgrounds" method="POST" class="validation" enctype="multipart/form-data" novalidate>
+            <div class="mb-3">
+            <label class="form-label" for="title">ENTER title</label>
+            <input class="form-control" type="text" id="title" name="campground[title]" required>
+            <div class="valid-feedback">
+                validated
+            </div>
+        </div>
+            <div class="mb-3">
+            <label class="form-label" for="location">ENTER LOCATION</label>
+            <input class="form-control" type="text" id="location" name="campground[location]" required>
+            <div class="valid-feedback">
+                validated
+            </div>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">$</span>
+            <input type="text" class="form-control" placeholder="price" name="campground[price]" aria-label="price" aria-describedby="price" required>
+            <div class="valid-feedback">
+                validated
+            </div>
+          </div>
+        <div class="mb-3">
+            <label class="form-label" for="description" >ENTER Description</label>
+            <textarea class="form-control" type="text" id="description" name="campground[description]" required></textarea>
+            <div class="valid-feedback">
+                validated
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="image" class="form-label" >Add Images:</label>
+            <input class="form-control" name="image" type="file" id="image" multiple>
+          </div>
+        <!-- <div class="mb-3">
+            <label class="form-label" for="image"  >ENTER Image url</label>
+            <input class="form-control" type="text" id="image" name="campground[image]" required>
+            <div class="valid-feedback">
+                validated
+            </div>
+        </div> -->
+            <button class="btn btn-primary">Add campground</button>
+        </form><span></span><form action="/campgrounds">
+            <button class="btn btn-secondary">BACK</button>
+        </form>
+    <br>
+    </div>
+</div>
